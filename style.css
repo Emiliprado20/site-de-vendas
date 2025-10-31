@@ -1,0 +1,247 @@
+/* Importação da Fonte (opcional, já está no HTML) */
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); */
+
+/* Estilos Globais */
+:root {
+    --cor-principal: #8A2BE2; /* Roxo vibrante */
+    --cor-secundaria: #FFD700; /* Dourado */
+    --cor-texto: #333;
+    --cor-fundo: #f4f4f4;
+    --cor-clara: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto);
+    background-color: var(--cor-clara);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-principal);
+}
+
+ul {
+    list-style: none;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: var(--cor-secundaria);
+    color: var(--cor-texto);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ffcc00;
+}
+
+.btn-produto {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: 10px 0;
+    margin-top: 15px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-produto:hover {
+    background: #7a1ee0;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background: var(--cor-clara);
+    color: var(--cor-texto);
+    padding: 15px 0;
+    border-bottom: 2px solid var(--cor-principal);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    color: var(--cor-principal);
+    font-weight: 700;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: var(--cor-texto);
+    font-weight: 400;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+/* Seção Principal (Hero) */
+.hero {
+    background: url('https://via.placeholder.com/1500x500.png?text=Fundo+Capilar+Destaque') no-repeat center center/cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    color: var(--cor-clara);
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Seção de Produtos */
+.produtos {
+    padding: 60px 0;
+    background: var(--cor-fundo);
+    text-align: center;
+}
+
+.produtos h3 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--cor-principal);
+}
+
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.produto-card {
+    background: var(--cor-clara);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+}
+
+.produto-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    /* Placeholder para simular a imagem */
+    height: 200px;
+    background-color: #eee;
+    display: block;
+    line-height: 200px;
+    text-align: center;
+    color: #999;
+}
+
+.produto-card h4 {
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.produto-card p {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    height: 40px; /* Para manter a altura consistente */
+}
+
+.produto-card .preco {
+    font-size: 1.5em;
+    color: var(--cor-secundaria);
+    font-weight: 700;
+}
+
+/* Seção Sobre Nós */
+.sobre {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sobre h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: var(--cor-principal);
+}
+
+.sobre p {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Rodapé */
+footer {
+    background: var(--cor-texto);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
